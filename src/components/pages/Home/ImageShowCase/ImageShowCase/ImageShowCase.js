@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { CircularProgress, Container, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { CircularProgress, Container, Box } from "@mui/material";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import SingleNewProduct from "../SingleNewProduct/SingleNewProduct";
-
-// user reviews page
-const NewArrivalsProducts = () => {
-  const [products, setProducts] = useState([]);
+// image slider  page
+const ImageShowCase = () => {
+  const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    fetch("/newarrivalsdata.json")
+    fetch("/imagesliderdata.json")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
+        setImages(data);
         setLoading(false);
       });
   }, []);
 
   const settings = {
-    dots: true,
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -37,7 +34,6 @@ const NewArrivalsProducts = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -46,7 +42,6 @@ const NewArrivalsProducts = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          dots: true,
         },
       },
       {
@@ -54,40 +49,31 @@ const NewArrivalsProducts = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
         },
       },
     ],
   };
   return (
-    <Container sx={{ py: 5 }}>
-      <Typography
-        sx={{ color: "#444444", fontWeight: "600" }}
-        variant="h4"
-        gutterBottom
-        component="div"
-      >
-        New Arrivals
-      </Typography>
-      <Typography sx={{ mb: 3 }} variant="body2" color="text.secondary">
-        Don't Miss Today's Featured Deals
-      </Typography>
-
+    <Box  sx={{backgroundColor:'#F8F9F7'}}>
+      <Container sx={{px: 4,}}>
       {loading ? (
         <Box sx={{ mt: 3, textAlign: "center" }}>
           <CircularProgress></CircularProgress>
         </Box>
       ) : (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1}}>
           <Slider {...settings}>
-            {products?.map((product, index) => (
-              <SingleNewProduct product={product} key={product.id} />
+            {images?.map((image, index) => (
+              <div key={image.id}>
+                <img width="100%" src={image.image} alt="" />
+              </div>
             ))}
           </Slider>
         </Box>
       )}
     </Container>
+    </Box>
   );
 };
 
-export default NewArrivalsProducts;
+export default ImageShowCase;

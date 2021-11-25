@@ -4,15 +4,16 @@ import { Box } from "@mui/system";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SingleItem from "../SingleItem/SingleItem";
+
+import SingleNewProduct from "../SingleNewProduct/SingleNewProduct";
 
 // user reviews page
-const FeaturedItems = () => {
+const NewArrivalsProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    fetch("/featureData.json")
+    fetch("/newarrivalsdata.json")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -25,7 +26,7 @@ const FeaturedItems = () => {
     infinite: true,
     autoplay: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
 
@@ -59,14 +60,17 @@ const FeaturedItems = () => {
     ],
   };
   return (
-    <Container sx={{ py: 5, px: 4 }}>
+    <Container sx={{ py: 5,px:4 }}>
       <Typography
-        sx={{ mb: 3, color: "#444444", fontWeight: "600" }}
+        sx={{ color: "#444444", fontWeight: "600" }}
         variant="h4"
         gutterBottom
         component="div"
       >
-        Featured Items
+        New Arrivals
+      </Typography>
+      <Typography sx={{ mb: 3,fontFamily: "Pacifico !important",letterSpacing: '2px' }} variant="body2" color="text.secondary">
+        Don't Miss Today's Featured Deals
       </Typography>
 
       {loading ? (
@@ -76,8 +80,8 @@ const FeaturedItems = () => {
       ) : (
         <Box sx={{ flexGrow: 1 }}>
           <Slider {...settings}>
-            {products?.map((items, index) => (
-              <SingleItem service={items} key={items.id} />
+            {products?.map((product, index) => (
+              <SingleNewProduct product={product} key={product.id} />
             ))}
           </Slider>
         </Box>
@@ -86,4 +90,4 @@ const FeaturedItems = () => {
   );
 };
 
-export default FeaturedItems;
+export default NewArrivalsProducts;
