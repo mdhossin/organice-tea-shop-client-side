@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Jasmine Flowering Tea",
+    "description": "Flowering Jasmine blossoms are hand-tied by artisans into an bulb which unfurls once water is added. The pale, grass green liquor has a soft, teasing jasmine aroma.",
+    "price": 16,
+    "image": "https://i.ibb.co/mtDG0sR/jasmine-flowering-tea.jpg",
+    "rating": 0
+  },
+  {
+    "id": 2,
+    "title": "Jasmine Green",
+    "description": "The heady aroma of jasmine green is rarely captured so distinctly in a tea. Our experts harvest the soft, downy green tea buds from spring’s first flush, store it until the jasmine comes into bloom. It is then laid out to permeate beneath a velvety bed of jasmine flowers to...",
+    "price": 15,
+    "image": "https://i.ibb.co/Mkdjmth/3.jpg",
+    "rating": 0
+  },
+  {
+    "id": 3,
+    "title": "Moroccan Mint",
+    "description": "Moroccan mint has been part of the North African way of life for many years. This beverage dates back to the early 18th century when Chinese green tea was first introduced into Morocco. Unlike food at that time, Moroccan mint tea was very much a man’s affair; prepared by the...",
+    "price": 10,
+    "image": "https://i.ibb.co/YtmTb1y/4.jpg",
+    "rating": 0
+  },
+  {
+    "id": 4,
+    "title": "Pink Rosebuds",
+    "description": "MThis Herbal is made from authentic Iranian rose buds, plucked when they are young and then dried to retain its unique floral character. In the cup, it has a natural rosy taste and perfumed aroma, making it a lovely and highly enjoyable beverage. The essential oils in Rosebud Tea can...",
+    "price": 18,
+    "image": "https://i.ibb.co/T44zgdp/pink-rosebuds.jpg",
+    "rating": 0
+  },
+    {"id": 5,
+    "title": "Strawberry & Kiwi",
+    "description": "Yielding a bold red brew with a heady fragrance, this infusion is brimming with sun-loving berries and fruits for a rich, full flavour. Sweet pieces of strawberry and kiwi harmonise with the robust taste of hibiscus and sunflowers for an intensely fruity experience.",
+    "price": 11,
+    "image": "https://i.ibb.co/KKCRj0T/strawberry-kiwi.jpg",
+    "rating": 0
+  },
+  
+    {"id": 6,
+    "title": "High Mountain Li Shan",
+    "description": "Smooth and Creamy with soft notes of honey and tropical fruits.",
+    "price": 23,
+    "image": "https://i.ibb.co/dMrx05q/high-mountiain.jpg",
+    "rating": 0
+  },
+    {"id": 7,
+    "title": "Anxi Tie Guan Yin",
+    "description": "This wild grown, traditional-style Tie Guan Yin is grown on rugged slopes around Anxi, southern Fujian province. This tea can be found in countless grades and prices but our Tie Guan Yin is the ultimate example of what this tea should be – exquisite floral aroma, unique flavour that lingers..",
+    "price": 24,
+    "image": "https://i.ibb.co/93CYC9x/anxi-tie-guan-yin.jpg",
+    "rating": 0
+  }
+    
+]

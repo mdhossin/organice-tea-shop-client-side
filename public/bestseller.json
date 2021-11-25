@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Lemongrass & Ginger",
+    "description": "This herbal blend compliments each other with pieces of ginger and lemongrass to create a golden liquor appearance. A refreshing citrus infusion with soft warm ginger notes to brighten up the day. A caffeine free drinking experience made with all natural ingredients.",
+    "price": 12,
+    "image": "https://i.ibb.co/fGHSngZ/image-1.jpg",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "title": "Red Fortune",
+    "description": "The combination of ripe red berries, rosehip and hibiscus have been put together to create this wonderful blend. Once infused this eye catching bright scarlet liquor creates a perfectly balanced aroma with excitingly soft fruity notes. A caffeine free drinking experience made with all natural ingredients.",
+    "price": 25,
+    "image": "https://i.ibb.co/4RjFJpt/2.jpg",
+    "rating": 4.9
+  },
+  {
+    "id": 3,
+    "title": "Jasmine Green",
+    "description": "The heady aroma of jasmine green is rarely captured so distinctly in a tea. Our experts harvest the soft, downy green tea buds from spring’s first flush, store it until the jasmine comes into bloom. It is then laid out to permeate beneath a velvety bed of jasmine flowers to...",
+    "price": 15,
+    "image": "https://i.ibb.co/Mkdjmth/3.jpg",
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "title": "Moroccan Mint",
+    "description": "Moroccan mint has been part of the North African way of life for many years. This beverage dates back to the early 18th century when Chinese green tea was first introduced into Morocco. Unlike food at that time, Moroccan mint tea was very much a man’s affair; prepared by the...",
+    "price": 18,
+    "image": "https://i.ibb.co/YtmTb1y/4.jpg",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "title": "Jasmine Dragon Pearls",
+    "description": "Scented tea production is a true art and involves many processes to achieve perfection. Each one is hand-made by rolling tippy, green tea into pearls then wrapping each pearl into paper to help maintain the shape. After wrapping and drying the tea is set aside until summer when the jasmine...",
+    "price": 14,
+    "image": "https://i.ibb.co/D1tDPPF/5.jpg",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "title": "Yin Zhen Silver Needle",
+    "description": "Scented tea production is a true art and involves many processes to achieve perfection. Each one is hand-made by rolling tippy, green tea into pearls then wrapping each pearl into paper to help maintain the shape. After wrapping and drying the tea is set aside until summer when the jasmine...",
+    "price": 19,
+    "image": "https://i.ibb.co/sFpgtjh/6.jpg",
+    "rating": 4
+  }
+]

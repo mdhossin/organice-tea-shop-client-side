@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Calming",
+    "description": "Body Care",
+    "price": 45,
+    "image": "https://i.ibb.co/rpQRRr3/calming.jpg",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "title": "Green & Tea",
+    "description": "Body Care",
+    "price": 35,
+    "image": "https://i.ibb.co/wJGxb0g/green-tea.jpg",
+    "rating": 4.2
+  },
+  {
+    "id": 3,
+    "title": "Green Pack",
+    "description": "Cosmetics",
+    "price": 95,
+    "image": "https://i.ibb.co/vB04Ds3/green-pack.jpg",
+    "rating": 3
+  },
+  {
+    "id": 4,
+    "title": "Coco Skies",
+    "description": "Cosmetics",
+    "price": 78,
+    "image": "https://i.ibb.co/bHj4Xvt/choco-shics.jpg",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "title": "Coco Green",
+    "description": "Body Care",
+    "price": 50,
+    "image": "https://i.ibb.co/K5XCwpM/coco-green.jpg",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "title": "Coco Lotion",
+    "description": "Body Care",
+    "price": 70,
+    "image": "https://i.ibb.co/9GhGt7m/coco-lotion.jpg",
+    "rating": 4.5
+  },
+  {
+    "id": 7,
+    "title": "Honey Green Tea",
+    "description": "Body Care",
+    "price": 25,
+    "image": "https://i.ibb.co/zGM17Zn/honey-green-tea.jpg",
+    "rating": 3.9
+  }
+]
+  
