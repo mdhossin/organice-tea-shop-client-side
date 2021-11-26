@@ -40,11 +40,11 @@ const useStyles = makeStyles(() => ({
     },
   },
 }));
-const SIngleProduct = ({ product, aos, aos_offset }) => {
+const SingleBeauty = ({ product, aos, aos_offset }) => {
   const { buttons, media, link } = useStyles();
-  const { title, image, price, description } = product;
+  const { title, image, price, category } = product;
   return (
-    <Grid item xs={4} sm={4} md={4}>
+    <Grid item xs={4} sm={4} md={3}>
       <Card
         className={link}
         data-aos={aos}
@@ -55,17 +55,17 @@ const SIngleProduct = ({ product, aos, aos_offset }) => {
         <CardMedia
           className={media}
           component="img"
-          height="250px"
+          height="350"
           width="100%"
           image={image}
           alt="green iguana"
         />
-        <CardContent>
-          <Typography sx={{color:'#444 !important'}} gutterBottom variant="h5" component="div">
+        <CardContent sx={{display:'flex', justifyContent: 'space-between', pb: 0}}>
+          <Typography sx={{color: '#444'}} gutterBottom variant="h5" component="div">
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {description.slice(0, 80)}...
+            {category}
           </Typography>
         </CardContent>
         <CardActions
@@ -86,4 +86,4 @@ const SIngleProduct = ({ product, aos, aos_offset }) => {
   );
 };
 
-export default SIngleProduct;
+export default SingleBeauty;

@@ -9,11 +9,9 @@ import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const useStyles = makeStyles(() => ({
   link: {
-    
     "&:hover": {
       boxShadow: "0 .5rem 1rem rgba(0,0,0,.15)",
       transition: ".3s all ease-in !important",
@@ -40,9 +38,9 @@ const useStyles = makeStyles(() => ({
     },
   },
 }));
-const SIngleProduct = ({ product, aos, aos_offset }) => {
+const SIngleProduct = ({ blog, aos, aos_offset }) => {
   const { buttons, media, link } = useStyles();
-  const { title, image, price, description } = product;
+  const { title, image, description, postDetail } = blog;
   return (
     <Grid item xs={4} sm={4} md={4}>
       <Card
@@ -61,25 +59,20 @@ const SIngleProduct = ({ product, aos, aos_offset }) => {
           alt="green iguana"
         />
         <CardContent>
-          <Typography sx={{color:'#444 !important'}} gutterBottom variant="h5" component="div">
+          <Typography sx={{ pb: 0.5 }} variant="body2" color="text.secondary">
+            {postDetail}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {description.slice(0, 80)}...
           </Typography>
         </CardContent>
-        <CardActions
-          sx={{ display: "flex", justifyContent: "space-between", px: 2 }}
-        >
-          {/* <Link style={{ textDecoration: "none" }} to={`/allServices/${_id}`}> */}
+        <CardActions>
           <Fab className={buttons} variant="extended" size="small">
-            <ShoppingCartIcon sx={{ fontSize: "18px",mr:0.5 }} />
-            Add to cart
+            Read More
           </Fab>
-          {/* </Link> */}
-          <Typography gutterBottom variant="h6" component="div">
-            ${price}
-          </Typography>
         </CardActions>
       </Card>
     </Grid>

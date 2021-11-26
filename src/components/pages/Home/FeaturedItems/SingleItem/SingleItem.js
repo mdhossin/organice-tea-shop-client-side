@@ -53,7 +53,7 @@ const SingleItem = ({ service }) => {
       />
       <CardContent className={cardContent}>
         <div>
-          <Typography sx={{ mb: 0 }} gutterBottom variant="h5" component="div">
+          <Typography sx={{ mb: 0, color: '#444 !important' }} gutterBottom variant="h5" component="div">
             {title}
           </Typography>
           <Typography sx={{ mt: 0 }} variant="body2" color="text.secondary">

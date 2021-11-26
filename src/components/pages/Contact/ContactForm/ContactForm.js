@@ -95,8 +95,8 @@ const ContactForm = () => {
                 label="Message..."
                 multiline
                 rows={4}
-                defaultValue=""
-                variant="standard"
+                placeholder="Write Message..."
+                variant="filled"
               />
             </form>
             <Button
