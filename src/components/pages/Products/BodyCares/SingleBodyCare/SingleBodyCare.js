@@ -13,7 +13,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const useStyles = makeStyles(() => ({
   link: {
-    
     "&:hover": {
       boxShadow: "0 .5rem 1rem rgba(0,0,0,.15)",
       transition: ".3s all ease-in !important",
@@ -60,8 +59,15 @@ const SingleBodyCare = ({ product, aos, aos_offset }) => {
           image={image}
           alt="green iguana"
         />
-        <CardContent sx={{display:'flex', justifyContent: 'space-between', pb: 0}}>
-          <Typography sx={{color: '#444'}} gutterBottom variant="h5" component="div">
+        <CardContent
+          sx={{ display: "flex", justifyContent: "space-between", pb: 0 }}
+        >
+          <Typography
+            sx={{ color: "#444" }}
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
@@ -73,7 +79,7 @@ const SingleBodyCare = ({ product, aos, aos_offset }) => {
         >
           {/* <Link style={{ textDecoration: "none" }} to={`/allServices/${_id}`}> */}
           <Fab className={buttons} variant="extended" size="small">
-            <ShoppingCartIcon sx={{ fontSize: "18px",mr:0.5 }} />
+            <ShoppingCartIcon sx={{ fontSize: "18px", mr: 0.5 }} />
             Add to cart
           </Fab>
           {/* </Link> */}

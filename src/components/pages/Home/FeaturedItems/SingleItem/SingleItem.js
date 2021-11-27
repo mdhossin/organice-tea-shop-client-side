@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   CardActions,
@@ -7,9 +8,9 @@ import {
   Rating,
   Typography,
 } from "@mui/material";
-import React from "react";
 import { makeStyles } from "@mui/styles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 const useStyles = makeStyles(() => ({
   icon: {
     color: "white",
@@ -39,9 +40,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 const SingleItem = ({ service }) => {
+  console.log("featured item,", service);
   const classes = useStyles();
   const { buttons, media, cardContent } = classes;
-  const { title, image, description, price, rating } = service;
+  const { _id, title, image, description, price, rating } = service;
   return (
     <Card sx={{ height: "100%", p: 1 }} elevation={0}>
       <CardMedia
@@ -53,7 +55,12 @@ const SingleItem = ({ service }) => {
       />
       <CardContent className={cardContent}>
         <div>
-          <Typography sx={{ mb: 0, color: '#444 !important' }} gutterBottom variant="h5" component="div">
+          <Typography
+            sx={{ mb: 0, color: "#444 !important" }}
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
             {title}
           </Typography>
           <Typography sx={{ mt: 0 }} variant="body2" color="text.secondary">
@@ -69,17 +76,14 @@ const SingleItem = ({ service }) => {
       <CardActions
         sx={{ display: "flex", justifyContent: "space-between", px: 2 }}
       >
-        {/* <Link style={{ textDecoration: "none" }} to={`/allServices/${_id}`}> */}
-        <Rating name="size-small" value={rating} size="small" readOnly />
-        {/* <Button variant="contained">
-            <ShoppingCartIcon sx={{ fontSize: "22px", mr: 0.5 }} />
+        <Link style={{ textDecoration: "none" }} to={`/placeorder/${_id}`}>
+          <Rating name="size-small" value={rating} size="small" readOnly />
+
+          <Fab className={buttons} variant="extended" size="small">
+            <ShoppingCartIcon sx={{ fontSize: "18px" }} />
             Add to cart
-          </Button> */}
-        <Fab className={buttons} variant="extended" size="small">
-          <ShoppingCartIcon sx={{ fontSize: "18px" }} />
-          Add to cart
-        </Fab>
-        {/* </Link> */}
+          </Fab>
+        </Link>
       </CardActions>
     </Card>
   );

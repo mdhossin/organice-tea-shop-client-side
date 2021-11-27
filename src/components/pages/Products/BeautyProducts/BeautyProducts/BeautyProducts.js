@@ -14,7 +14,7 @@ const BeautyProducts = () => {
   useEffect(() => {
     AOS.init()
     setLoading(true);
-    fetch("/beauty.json")
+    fetch("http://localhost:8000/beautyProducts")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

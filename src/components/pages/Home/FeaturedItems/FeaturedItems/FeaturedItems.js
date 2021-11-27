@@ -6,17 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SingleItem from "../SingleItem/SingleItem";
 
-// user reviews page
 const FeaturedItems = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    fetch("/featureData.json")
+    fetch("http://localhost:8000/featuredProducts")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
         setLoading(false);
+        setProducts(data);
       });
   }, []);
 
@@ -28,7 +27,6 @@ const FeaturedItems = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
-
     responsive: [
       {
         breakpoint: 1024,
@@ -77,7 +75,7 @@ const FeaturedItems = () => {
         <Box sx={{ flexGrow: 1 }}>
           <Slider {...settings}>
             {products?.map((items, index) => (
-              <SingleItem service={items} key={items.id} />
+              <SingleItem service={items} key={items._id} />
             ))}
           </Slider>
         </Box>

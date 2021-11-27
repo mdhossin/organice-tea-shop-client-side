@@ -21,18 +21,17 @@ const Testimonials = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("/testimonials.json")
+    fetch("http://localhost:8000/testimonials")
       .then((res) => res.json())
       .then((data) => {
-        setReviews(data);
         setIsLoading(false);
+        setReviews(data);
       });
   }, []);
 
   const settings = {
     dots: true,
     infinite: true,
-
     autoplay: true,
     speed: 500,
     slidesToShow: 1,
@@ -92,15 +91,15 @@ const Testimonials = () => {
 
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#F8F9F7", }}>
-      <Container sx={{ pb: 8, py: 5 ,px: 4}}>
+    <div style={{ backgroundColor: "#F8F9F7" }}>
+      <Container sx={{ pb: 8, py: 5, px: 4 }}>
         <Typography
           sx={{
             textAlign: "center",
             mb: 1,
             color: "#444444",
             fontFamily: "Pacifico !important",
-            letterSpacing:'2px'
+            letterSpacing: "2px",
           }}
           variant="body1"
           gutterBottom
@@ -142,7 +141,7 @@ const Testimonials = () => {
                     </Typography>
                     <CardContent>
                       <Typography
-                        sx={{ textAlign: "center", lineHeight: '1.7' }}
+                        sx={{ textAlign: "center", lineHeight: "1.7" }}
                         variant="body1"
                         color="text.secondary"
                       >

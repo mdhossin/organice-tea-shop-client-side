@@ -1,21 +1,21 @@
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { CircularProgress, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useEffect, useState } from "react";
 import SIngleProduct from "../SingleProduct/SIngleProduct";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 const BestSellerProducts = () => {
   const [products, setProducts] = useState([]);
-  console.log(products)
+  console.log(products);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    AOS.init()
+    AOS.init();
     setLoading(true);
-    fetch("/bestseller.json")
+    fetch("http://localhost:8000/bestSellerProducts")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
         setLoading(false);
+        setProducts(data);
       });
   }, []);
   return (

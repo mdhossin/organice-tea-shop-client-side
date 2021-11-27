@@ -1,12 +1,11 @@
-import { Container, Grid } from "@mui/material";
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Container, Grid } from "@mui/material";
 import showCaseOne from "../../../../../assets/images/Showcaseimage/imageOne.jpg";
 import showCaseTwo from "../../../../../assets/images/Showcaseimage/showCaseOne.jpg";
 import showCaseThree from "../../../../../assets/images/Showcaseimage/imageThree.jpg";
 import showCaseFour from "../../../../../assets/images/Showcaseimage/imageFour.jpg";
-
 import SingleShowCase from "../SingleShowCase/SingleShowCase";
 
 const showcaseData = [

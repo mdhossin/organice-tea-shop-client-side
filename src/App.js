@@ -6,6 +6,8 @@ import AboutUs from './components/pages/About/AboutUs/AboutUs/AboutUs';
 import Blogs from './components/pages/Blogs/Blogs/Blogs';
 import Contact from './components/pages/Contact/Contact/Contact';
 import Home from './components/pages/Home/Home/Home';
+import PlaceOrder from './components/pages/PlaceOrder/PlaceOrder/PlaceOrder';
+
 import BeautyProducts from './components/pages/Products/BeautyProducts/BeautyProducts/BeautyProducts';
 import BodyCares from './components/pages/Products/BodyCares/BodyCares/BodyCares';
 import HealthProducts from './components/pages/Products/HealthProducts/HealthProducts/HealthProducts';
@@ -27,6 +29,7 @@ function App() {
       <Route path="/healthcare" element={<HealthProducts></HealthProducts>}></Route>
       <Route path="/beautycare" element={<BeautyProducts></BeautyProducts>}></Route>
       <Route path="/naturalcare" element={<NatureProducts></NatureProducts>}></Route>
+      <Route path="/placeorder/:id" element={<PlaceOrder></PlaceOrder>}></Route>
     </Routes>
       
     </BrowserRouter>

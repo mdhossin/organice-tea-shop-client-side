@@ -1,6 +1,6 @@
+import React from "react";
 import { Button, TextField, Typography, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
 import { useTheme } from "@mui/material";
 
 const SubscribeArea = () => {

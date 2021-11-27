@@ -1,6 +1,6 @@
+import React from "react";
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import { makeStyles } from "@mui/styles";
 
 const SingleShowCase = ({ showcase, aos, aos_offset }) => {

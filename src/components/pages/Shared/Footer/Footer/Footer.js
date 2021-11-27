@@ -1,5 +1,5 @@
-import { Container, Grid, Typography, Box } from "@mui/material";
 import React from "react";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import EmailIcon from "@mui/icons-material/Email";
@@ -8,9 +8,9 @@ import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutli
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 const Footer = () => {
   return (
-    <div style={{ backgroundColor: "#F8F9F7"}}>
+    <div style={{ backgroundColor: "#F8F9F7" }}>
       <Container sx={{ py: 10 }}>
-        <Grid  container spacing={2}>
+        <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={3}>
             <Typography
               sx={{ color: "#444" }}
@@ -21,7 +21,7 @@ const Footer = () => {
               About Us
             </Typography>
             <Typography
-              sx={{ color: "#91928d", mt: 2, lineHeight: '1.7' }}
+              sx={{ color: "#91928d", mt: 2, lineHeight: "1.7" }}
               variant="body1"
               gutterBottom
               component="div"
@@ -130,7 +130,7 @@ const Footer = () => {
 
             <Box sx={{ mt: 1 }}>
               <Typography
-                sx={{ color: "#91928d", lineHeight: '1.7' }}
+                sx={{ color: "#91928d", lineHeight: "1.7" }}
                 variant="body1"
                 gutterBottom
                 component="div"
@@ -148,18 +148,17 @@ const Footer = () => {
             </Box>
           </Grid>
         </Grid>
-        
       </Container>
-      <div >
-          <Typography
-            sx={{ color: "#91928d", textAlign: "center",pb: 2 }}
-            variant="body1"
-            gutterBottom
-            component="div"
-          >
-            Copyright © 2021 Qode Interactive, All Rights Reserved
-          </Typography>
-        </div>
+      <div>
+        <Typography
+          sx={{ color: "#91928d", textAlign: "center", pb: 2 }}
+          variant="body1"
+          gutterBottom
+          component="div"
+        >
+          Copyright © 2021 Qode Interactive, All Rights Reserved
+        </Typography>
+      </div>
     </div>
   );
 };

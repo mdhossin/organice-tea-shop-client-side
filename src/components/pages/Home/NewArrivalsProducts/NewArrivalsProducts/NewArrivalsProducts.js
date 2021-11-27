@@ -4,20 +4,18 @@ import { Box } from "@mui/system";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import SingleNewProduct from "../SingleNewProduct/SingleNewProduct";
 
-// user reviews page
 const NewArrivalsProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    fetch("/newarrivalsdata.json")
+    fetch("http://localhost:8000/newArrivalsProducts")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
         setLoading(false);
+        setProducts(data);
       });
   }, []);
 
@@ -60,7 +58,7 @@ const NewArrivalsProducts = () => {
     ],
   };
   return (
-    <Container sx={{ py: 5,px:4 }}>
+    <Container sx={{ py: 5, px: 4 }}>
       <Typography
         sx={{ color: "#444444", fontWeight: "600" }}
         variant="h4"
@@ -69,7 +67,11 @@ const NewArrivalsProducts = () => {
       >
         New Arrivals
       </Typography>
-      <Typography sx={{ mb: 3,fontFamily: "Pacifico !important",letterSpacing: '2px' }} variant="body2" color="text.secondary">
+      <Typography
+        sx={{ mb: 3, fontFamily: "Pacifico !important", letterSpacing: "2px" }}
+        variant="body2"
+        color="text.secondary"
+      >
         Don't Miss Today's Featured Deals
       </Typography>
 

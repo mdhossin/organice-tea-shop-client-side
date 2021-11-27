@@ -1,7 +1,7 @@
+import React from "react";
 import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import React from "react";
 import aboutBg from "../../../../../assets/images/aboutUsImage/aboutus.jpg";
 import Footer from "../../../Shared/Footer/Footer/Footer";
 import OurBest from "../../OurBest/OurBest";
@@ -15,7 +15,7 @@ const useStyle = makeStyles({
     height: "300px",
   },
   buttons: {
-      marginLeft: '25px !important',
+    marginLeft: "25px !important",
     "&:hover": {
       backgroundColor: "lightgray !important",
       color: "#444 !important",
@@ -25,27 +25,27 @@ const useStyle = makeStyles({
 const AboutUs = () => {
   const { aboutBg, buttons } = useStyle();
   return (
-      <>
-    <Box sx={{ marginTop: "55px" }}>
-      <Box className={aboutBg}>
-        <Box sx={{ color: "white", width: "200px", m: "0 auto", pt: 12 }}>
-          <Typography color="white" variant="h3" gutterBottom component="div">
-            About Us
-          </Typography>
+    <>
+      <Box sx={{ marginTop: "55px" }}>
+        <Box className={aboutBg}>
+          <Box sx={{ color: "white", width: "200px", m: "0 auto", pt: 12 }}>
+            <Typography color="white" variant="h3" gutterBottom component="div">
+              About Us
+            </Typography>
 
-          <Button
-            className={buttons}
-            variant="outlined"
-            style={{ color: "white", borderColor: "#fff" }}
-          >
-            Read more
-          </Button>
+            <Button
+              className={buttons}
+              variant="outlined"
+              style={{ color: "white", borderColor: "#fff" }}
+            >
+              Read more
+            </Button>
+          </Box>
         </Box>
       </Box>
-    </Box>
-    <WhyOrganic></WhyOrganic>
-    <OurBest></OurBest>
-    <Footer></Footer>
+      <WhyOrganic></WhyOrganic>
+      <OurBest></OurBest>
+      <Footer></Footer>
     </>
   );
 };

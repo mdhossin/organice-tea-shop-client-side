@@ -1,10 +1,9 @@
+import React from "react";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
 import Accordions from "../Accordion/Accordions";
 const useStyle = makeStyles({
   buttons: {
-   
     "&:hover": {
       backgroundColor: "lightgray !important",
       color: "#444 !important",
@@ -19,7 +18,6 @@ const WhyOrganic = () => {
         <Grid item xs={12} md={6}>
           <Typography
             sx={{
-             
               fontFamily: "Pacifico !important",
               letterSpacing: "2px",
             }}
@@ -36,7 +34,11 @@ const WhyOrganic = () => {
           >
             Our philosophy
           </Typography>
-          <Typography sx={{ mb: 3, lineHeight: '1.7' }} variant="body2" color="text.secondary">
+          <Typography
+            sx={{ mb: 3, lineHeight: "1.7" }}
+            variant="body2"
+            color="text.secondary"
+          >
             Qui soleat legere gloriatur an, ad zril labores pro, eum postea
             veritus eu. Ei iudico essent latine has. Modus omnium vi tuperata
             vis ei, ea tale erat app lantur sit, pro ex tale doming molestiae.

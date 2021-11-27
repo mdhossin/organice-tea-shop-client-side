@@ -60,15 +60,16 @@ const Carousel = () => {
         marginTop: "120px",
       },
     },
-    buttons:{
-      "&:hover" : {
-        backgroundColor: 'lightgray !important',
-        color: '#444 !important'
-      }
-    }
+    buttons: {
+      "&:hover": {
+        backgroundColor: "lightgray !important",
+        color: "#444 !important",
+      },
+    },
   });
 
-  const { collection, heading, headingContainer, mainContainer, buttons } = useStyle();
+  const { collection, heading, headingContainer, mainContainer, buttons } =
+    useStyle();
 
   const settings = {
     infinite: true,
@@ -125,7 +126,7 @@ const Carousel = () => {
                       {slider.title}
                     </Typography>
                     <Button
-                    className={buttons}
+                      className={buttons}
                       variant="outlined"
                       style={{ color: "white", borderColor: "#fff" }}
                     >

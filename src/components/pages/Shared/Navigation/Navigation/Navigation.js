@@ -12,7 +12,6 @@ import { makeStyles } from "@mui/styles";
 import { NavLink as Link } from "react-router-dom";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-
 // import useAuth from "../../../hooks/useAuth";
 import { Box } from "@mui/system";
 import logo from "../../../../../assets/logo/navbar-logo.png";
@@ -21,7 +20,7 @@ const useStyles = makeStyles(() => ({
   navlinks: {
     marginLeft: "20px",
     display: "flex",
-    textTransform:'capitalize !important'
+    textTransform: "capitalize !important",
   },
   logo: {
     flexGrow: "1",
@@ -36,25 +35,23 @@ const useStyles = makeStyles(() => ({
     color: "black",
     fontSize: "18px",
     marginLeft: "20px",
-    
   },
   linkButton: {
     textDecoration: "none",
     color: "black",
     fontSize: "18px",
     marginLeft: "20px",
-    
   },
   menuItem: {
     color: "black",
     textDecoration: "none",
-    fontSize: '16px !important',
-    padding: '0 10px !important'
+    fontSize: "16px !important",
+    padding: "0 10px !important",
   },
   buttons: {
-    textTransform: 'capitalize !important',
-    fontSize: '16px !important'
-  }
+    textTransform: "capitalize !important",
+    fontSize: "16px !important",
+  },
 }));
 // navbar page
 function Navigation() {
@@ -98,7 +95,9 @@ function Navigation() {
               }}
               className={classes.link}
             >
-              <Button className={classes.buttons} color="inherit">Home</Button>
+              <Button className={classes.buttons} color="inherit">
+                Home
+              </Button>
             </Link>
             <Link
               activeStyle={{
@@ -108,7 +107,9 @@ function Navigation() {
               to="/about"
               className={classes.link}
             >
-              <Button className={classes.buttons} color="inherit">About Us</Button>
+              <Button className={classes.buttons} color="inherit">
+                About Us
+              </Button>
             </Link>
             <Link
               activeStyle={{
@@ -118,7 +119,9 @@ function Navigation() {
               to="/blogs"
               className={classes.link}
             >
-              <Button className={classes.buttons} color="inherit">Blogs</Button>
+              <Button className={classes.buttons} color="inherit">
+                Blogs
+              </Button>
             </Link>
 
             <div style={{ marginLeft: "10px" }}>
@@ -134,7 +137,6 @@ function Navigation() {
               </Button>
 
               <Menu
-
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
@@ -164,7 +166,6 @@ function Navigation() {
                     Natural
                   </Link>
                 </MenuItem>
-                
               </Menu>
             </div>
             <Link
@@ -175,7 +176,9 @@ function Navigation() {
               to="/contact"
               className={classes.link}
             >
-              <Button className={classes.buttons} color="inherit">Contact</Button>
+              <Button className={classes.buttons} color="inherit">
+                Contact
+              </Button>
             </Link>
 
             {user?.email && (

@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
 import { makeStyles } from "@mui/styles";
 import { useTheme } from "@mui/material";
 import matchaOne from "../../../../../assets/images/matchaTeaBanner/matchaOne.jpg";
@@ -102,7 +101,7 @@ const MatchaTeaBanner = () => {
               className={buttons}
               style={{ color: "rgb(34,34,34)", borderColor: "lightgrey" }}
             >
-             Shop Now
+              Shop Now
             </Button>
           </Box>
         </Grid>

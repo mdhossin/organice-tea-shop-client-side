@@ -1,7 +1,5 @@
 import React from "react";
 import Footer from "../../Shared/Footer/Footer/Footer";
-
-
 import Banner from "../Banner/Banner/Banner";
 import BestSellerProducts from "../BestSeller/BestSeller/BestSellerProducts";
 import FeaturedItems from "../FeaturedItems/FeaturedItems/FeaturedItems";
@@ -17,15 +15,15 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-       <ShowCaseTea></ShowCaseTea> 
+      <ShowCaseTea></ShowCaseTea>
       <FeaturedItems></FeaturedItems>
       <MatchaTeaBanner></MatchaTeaBanner>
-      <BestSellerProducts></BestSellerProducts> 
-       <GreenTeaBanner></GreenTeaBanner>
+      <BestSellerProducts></BestSellerProducts>
+      <GreenTeaBanner></GreenTeaBanner>
       <NewArrivalsProducts></NewArrivalsProducts>
       <Testimonials></Testimonials>
-      <ImageShowCase/>
-      <SubscribeArea></SubscribeArea> 
+      <ImageShowCase />
+      <SubscribeArea></SubscribeArea>
       <Footer></Footer>
     </div>
   );

@@ -1,11 +1,17 @@
-import { Button, CircularProgress, Container, Grid, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {
+  Button,
+  CircularProgress,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import React, { useEffect, useState } from "react";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import blogBg from "../../../../assets/images/blogImages/blogBg.jpg";
-import Blog from '../Blog/Blog'
+import Blog from "../Blog/Blog";
 import Footer from "../../Shared/Footer/Footer/Footer";
 const useStyle = makeStyles({
   contactBg: {
@@ -15,7 +21,6 @@ const useStyle = makeStyles({
     height: "300px",
   },
   buttons: {
-   
     "&:hover": {
       backgroundColor: "lightgray !important",
       color: "#444 !important",
@@ -23,51 +28,48 @@ const useStyle = makeStyles({
   },
 });
 const Blogs = () => {
-    const [blogs, setBlogs] = useState([]);
-    console.log(blogs)
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-      AOS.init()
-      setLoading(true);
-      fetch("/blogsdata.json")
-        .then((res) => res.json())
-        .then((data) => {
-          setBlogs(data);
-          setLoading(false);
-        });
-    }, []);
-
-
-
+  const [blogs, setBlogs] = useState([]);
+  console.log(blogs);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    AOS.init();
+    setLoading(true);
+    fetch("http://localhost:8000/blogs")
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        setBlogs(data);
+      });
+  }, []);
 
   const { contactBg, buttons } = useStyle();
   return (
-      <>
-    <Box sx={{ marginTop: "55px" }}>
-      <Box className={contactBg}>
-        <Box sx={{ color: "white", width: "300px", m: "0 auto", pt: 12 }}>
-          <Typography color="white" variant="h3" gutterBottom component="div">
-            Blogs
-          </Typography>
+    <>
+      <Box sx={{ marginTop: "55px" }}>
+        <Box className={contactBg}>
+          <Box sx={{ color: "white", width: "300px", m: "0 auto", pt: 12 }}>
+            <Typography color="white" variant="h3" gutterBottom component="div">
+              Blogs
+            </Typography>
 
-          <Button
-            className={buttons}
-            variant="outlined"
-            style={{ color: "white", borderColor: "#fff" }}
-          >
-            Read more
-          </Button>
+            <Button
+              className={buttons}
+              variant="outlined"
+              style={{ color: "white", borderColor: "#fff" }}
+            >
+              Read more
+            </Button>
+          </Box>
         </Box>
       </Box>
-    </Box>
-    <Container sx={{ py: 5 }}>
+      <Container sx={{ py: 5 }}>
         <Typography
-          sx={{ mb: 3, color: "#444444", textAlign: 'center' }}
+          sx={{ mb: 3, color: "#444444", textAlign: "center" }}
           variant="h4"
           gutterBottom
           component="div"
         >
-         Our Best Blogs
+          Our Best Blogs
         </Typography>
         {loading ? (
           <Box sx={{ mt: 3, textAlign: "center" }}>

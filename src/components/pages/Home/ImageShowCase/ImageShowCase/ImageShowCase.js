@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { CircularProgress, Container, Box } from "@mui/material";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +10,7 @@ const ImageShowCase = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    fetch("/imagesliderdata.json")
+    fetch("http://localhost:8000/imageSliderShowCase")
       .then((res) => res.json())
       .then((data) => {
         setImages(data);
@@ -54,24 +53,24 @@ const ImageShowCase = () => {
     ],
   };
   return (
-    <Box  sx={{backgroundColor:'#F8F9F7'}}>
-      <Container sx={{px: 4,}}>
-      {loading ? (
-        <Box sx={{ mt: 3, textAlign: "center" }}>
-          <CircularProgress></CircularProgress>
-        </Box>
-      ) : (
-        <Box sx={{ flexGrow: 1}}>
-          <Slider {...settings}>
-            {images?.map((image, index) => (
-              <div key={image.id}>
-                <img width="100%" src={image.image} alt="" />
-              </div>
-            ))}
-          </Slider>
-        </Box>
-      )}
-    </Container>
+    <Box sx={{ backgroundColor: "#F8F9F7" }}>
+      <Container sx={{ px: 4 }}>
+        {loading ? (
+          <Box sx={{ mt: 3, textAlign: "center" }}>
+            <CircularProgress></CircularProgress>
+          </Box>
+        ) : (
+          <Box sx={{ flexGrow: 1 }}>
+            <Slider {...settings}>
+              {images?.map((image, index) => (
+                <div key={image.id}>
+                  <img width="100%" src={image.image} alt="" />
+                </div>
+              ))}
+            </Slider>
+          </Box>
+        )}
+      </Container>
     </Box>
   );
 };
